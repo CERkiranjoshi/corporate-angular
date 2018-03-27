@@ -1,0 +1,51 @@
+@import '../../assets/css/app.scss';
+body{
+      font-size: $fontSize;
+}
+.top-header{
+	background-color: $headerColor;
+	padding: 10px;
+	i{
+		color: $iconColor;
+		padding: 5px;
+	}
+	span{
+		color: $iconColor;
+	}
+}
+.navbar{
+	border-radius: 0px; 
+}
+hr{
+      margin-top: 5px;
+      margin-bottom: 5px;
+}
+.logo-icon{
+	color: $themeColor;
+	font-size: 18px;
+	font-weight: bold;
+	margin-right: 10px;
+}
+.menu-icon{
+	margin-right: 5px;
+}
+.navbar-custom-white{
+	background-color:$navbarColor;
+	border-color:$navbarColor;
+	background-image :none;
+}
+.navbar-brand{
+	// height: 70px;
+	// padding : 25px 25px;
+}
+.navbar-right{
+	// padding: 10px 10px;
+}
+.navbar-nav > li{
+	margin-right: 10px;
+}
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus{
+	background: $themeColor;
+	color: $white;
+	font-weight: bold;
+}

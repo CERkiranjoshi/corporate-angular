@@ -1,0 +1,72 @@
+//All web theme color also including highlight text color:
+$themeColor  : #e96b56;
+//headerColor: Top bar where we show linkedin, facebook links
+$headerColor: #656565;
+// navbarColor : Navigation Bar color
+$navbarColor:#fff;
+// footerColor : Footer color
+$footerColor:#222;
+// subfooterColor : sub Footer color
+$subfooterColor:#111;
+//font size
+$fontSize:14px;
+
+
+$iconColor : #fff;
+$white : #fff;
+//Strings
+$string : '../images/hello.jpg';
+$stringTwo :  "../images/hello.jpg";
+$stringThree :  no-repeat;
+$stringSelector :  element;
+
+//Colors
+$colString : gray;
+$hex : #ccc;
+$rgb : rgb(230,230,230);
+$rgba : rgba(230,230,230,.2);
+
+$list : 1px 1px 3px black,  3px 3px 4px #ccc;
+
+
+$map: (     "key1": "value1",    "color": blue    );
+$bool: true;
+$null: null;
+
+
+@mixin cssProperties( $argOne, $argTwo ) {
+      #main{
+            color: $argOne;
+            background: green;
+            line-height: $argTwo;
+      }
+}
+
+@mixin boxShadow( $shadow... ) {
+      -webkit-box-shadow: $shadow;
+      -moz-box-shadow: $shadow;
+      -o-box-shadow: $shadow;
+      box-shadow: $shadow;
+}
+
+@mixin keyframes( $name ) {
+      @-webkit-keyframes #{ $name } {
+            @content;
+      }
+      @-moz-keyframes #{ $name } {
+            @content;
+      }
+      @-o-keyframes #{ $name } {
+            @content;
+      }
+      @keyframes #{ $name } {
+            @content;
+      }
+}
+
+//////////////////////////////////////////// Exported Code ///////////////////////////////////////////////////////
+
+@include keyframes( myAnim ) {
+      0% { opacity: 0 }
+      100% { opacity: 1 }
+};
