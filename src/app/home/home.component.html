@@ -1,3 +1,81 @@
-<p>
-  home works!
-</p>
+<section id="works">
+	<div class="col-md-6 col-sm-12 col-xs-12">
+            <carousel  [interval]="myInterval" [noWrap]="noWrapSlides">
+                <slide *ngFor="let slide of slides ; let index=index">
+                        <div *ngIf="slide.type=='template' && slide.template=='download'">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-6 col-xs-12 text-center" style="margin: auto;">
+                                    <h3 style="font-weight: bold;">Article template for <span class="theme-color">multi usage</span></h3>
+                                    <h5> Now you can generate your custom article with single click , checkout more details Read more Or download pdf for more tips & triks</h5>
+                                    <button class="btn btn-md btn-success"><i class="fa fa-file menu-icon" aria-hidden="true"></i>Read More</button>
+                                    <button class="btn btn-md btn-custom"><i class="fa fa-download menu-icon" aria-hidden="true"></i>Download</button>
+                                </div>
+                                <div class="col-md-12 col-sm-6 col-xs-12 hidden-xs" style="margin-top: 20px;">
+                                    <img src="../assets/img/screen.png" class="img-responsive" />
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngIf="slide.type=='template' && slide.template=='sub'">
+                        	<div class="row">
+                                <div class="col-md-12 col-sm-6 col-xs-12 hidden-xs">
+                                    <img src="../assets/img/imac.png" class="img-responsive" />
+                                </div>
+                                <div class="col-md-12 col-sm-6 col-xs-12 text-center" style="margin: auto">
+                                     <h3 style="font-weight: bold;">Put your <span class="theme-color">Opt in form</span>
+                                     </h3>
+                                    <h5> Keep updated for new releases and freebies. Enter your e-mail and subscribe to our newsletter.</h5>
+                                    <form class="form-inline">
+                                        <div class="form-group col-xs-12">
+                                            <input placeholder="Email address" style="width: 180px;" class="form-control input-md email-address-input" id="appendedInputButton" type="text">
+                                            <button class="btn btn-warning  btn-md btn-custom" type="submit"><i class="fa fa-envelope-o menu-icon" aria-hidden="true"></i>Subscribe</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                         <div *ngIf="slide.type=='template' && slide.template=='browser'">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <h3 style="font-weight: bold;">Responsive and <span class="theme-color">cross browser compatibility</span></h3>
+                                    <img src="../assets/img/browsers.png" class="img-responsive" />
+                                </div>
+                                <div class="col-md-12 col-sm-6 col-xs-12 hidden-xs hidden-sm">
+                                    <img src="../assets/img/responsive2.png" class="img-responsive" style="height: 180px;" />
+                                </div>
+                            </div>
+                        </div>
+                </slide>
+            </carousel>
+	</div>
+
+	<div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <h3 class="title"><i class="fa fa-file menu-icon theme-color" aria-hidden="true"></i> Recent <strong class="theme-color">Article</strong></h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12 custom-grid" *ngFor="let article of articleList ; let index=index">
+                        <div class="thumbnail-box-wrapper">
+                            <div class="thumbnail-box">
+                                <div class="thumb-content">
+                                    <div class="center-vertical">
+                                        <div class="center-content">
+                                            <div class="thumb-btn animated zoomIn">
+                                                <span class="glyphicon glyphicon-plus article-icon" tooltip="View"  (click)="openArticle(article)"></span>
+                                                <span class="glyphicon glyphicon-eye-open article-icon" tooltip="Add"
+                                                (click)="openArticle(article)"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="thumb-overlay bg-black"></div>
+                                <div class="innerdata">
+                                    <img [src]="article.image" class="img-responsive" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+</section>

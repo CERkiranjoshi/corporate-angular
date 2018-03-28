@@ -16,6 +16,7 @@ import {
   DatepickerModule,
   TimepickerModule,
   ProgressbarModule,
+  CarouselModule,
   ModalModule, ModalDirective
 } from 'ngx-bootstrap';
 
@@ -39,6 +40,7 @@ import {
     TimepickerModule.forRoot(),
     AlertModule.forRoot(),
     ModalModule.forRoot(),
+    CarouselModule.forRoot(),
     ProgressbarModule.forRoot()
   ],
   providers: [],
