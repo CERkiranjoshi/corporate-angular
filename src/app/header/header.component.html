@@ -18,17 +18,17 @@
                 <a class="navbar-brand text-uppercase" href="#home" ng-click="setTabs('home')"><i class="hide fa fa-contao logo-icon" aria-hidden="true"></i><strong>SANJAY GAWDE</strong></a>
             </div>
             <ul class="nav navbar-nav navbar-right">
-                <li ng-class="{'active':tab=='home'}"><a href="#home" ng-click="setTabs('home')"><i class="fa fa-home menu-icon" aria-hidden="true"></i>Home</a></li>
-                <li ng-class="{'active':tab=='article'}" class="dropdown" uib-dropdown><a class="dropdown-toggle" uib-dropdown-toggle data-toggle="dropdown" href="#"><i class="fa fa-file menu-icon" aria-hidden="true"></i>Article<span class="caret"></span></a>
-                    <ul class="dropdown-menu" uib-dropdown-menu>
+                <li class='active' ng-class="{'active':tab=='home'}"><a href="#home" ng-click="setTabs('home')"><i class="fa fa-home menu-icon" aria-hidden="true"></i>Home</a></li>
+                <li ng-class="{'active':tab=='article'}" class="dropdown" dropdown><a dropdownToggle class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)"><i class="fa fa-file menu-icon" aria-hidden="true"></i>Article<span class="caret"></span></a>
+                    <ul *dropdownMenu class="dropdown-menu">
                         <li><a href="#article" ng-click="setTabs('article')">Life Calling</a></li>
                         <li><a href="#article" ng-click="setTabs('article')">Build your Organization</a></li>
                         <li><a href="#article" ng-click="setTabs('article')">Organization Structure</a></li>
                         <li><a href="#article" ng-click="setTabs('article')">Thank "No-Shows"</a></li>
                     </ul>
                 </li>
-                <li ng-class="{'active':tab=='research'}" class="dropdown" uib-dropdown><a class="dropdown-toggle" uib-dropdown-toggle data-toggle="dropdown" href="#"><i class="fa fa-renren menu-icon" aria-hidden="true"></i>Research<span class="caret"></span></a>
-                    <ul class="dropdown-menu" uib-dropdown-menu>
+                <li ng-class="{'active':tab=='research'}" class="dropdown" dropdown><a class="dropdown-toggle" dropdownToggle data-toggle="dropdown" href="javascript:void(0)"><i class="fa fa-renren menu-icon" aria-hidden="true"></i>Research<span class="caret"></span></a>
+                    <ul class="dropdown-menu" *dropdownMenu>
                         <li><a href="#research" ng-click="setTabs('research')">Research 1</a></li>
                         <li><a href="#research" ng-click="setTabs('research')">Research 2</a></li>
                         <li><a href="#research" ng-click="setTabs('research')">Research 3</a></li>
